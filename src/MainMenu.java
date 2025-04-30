@@ -13,7 +13,7 @@ public class MainMenu {
 
         String[] outlets = {"Dominos", "Dunkin Donuts", "Kathi Rolls", "Annapurna", "Food Court", "Bakery"};
         String[] imagePaths = {
-            "image/Dominos.png",
+            "image/Dominos.jpg",
             "image/Dunkin.jpg",
             "image/Kathi Roll.jpg",
             "image/Annpurna.jpg",
@@ -43,7 +43,6 @@ public class MainMenu {
             button.setFont(new Font("Arial", Font.BOLD, 16));
             button.setBackground(new Color(153, 51, 0));
             button.setForeground(Color.WHITE);
-
             button.addActionListener(e -> {
                 new OutletMenu(outlet); 
                 frame.dispose();

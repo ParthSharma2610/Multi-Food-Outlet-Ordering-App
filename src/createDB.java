@@ -16,18 +16,18 @@ public class createDB {
         content.setLayout(new BorderLayout());
 
         JLabel title = new JLabel("🍽 Cuisine Crossroad", SwingConstants.CENTER);
-        title.setFont(new Font("Serif", Font.BOLD, 28));
+        title.setFont(new Font("Serif", Font.BOLD, 32));
         title.setForeground(new Color(153, 51, 0));
 
         JLabel subtitle = new JLabel("Your gateway to world flavors", SwingConstants.CENTER);
-        subtitle.setFont(new Font("SansSerif", Font.ITALIC, 16));
+        subtitle.setFont(new Font("SansSerif", Font.ITALIC, 20));
         subtitle.setForeground(new Color(102, 51, 0));
 
         content.add(title, BorderLayout.CENTER);
         content.add(subtitle, BorderLayout.SOUTH);
 
         splash.getContentPane().add(content);
-        splash.setSize(450, 200);
+        splash.setSize(450, 450);
 
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
         splash.setLocation((screen.width - splash.getSize().width) / 2,
@@ -50,16 +50,16 @@ public class createDB {
     private static void showLoginForm() {
         JFrame loginFrame = new JFrame("Cuisine Crossroad - Login");
         loginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        loginFrame.setSize(450, 400);
+        loginFrame.setSize(500, 500);
         loginFrame.setLayout(new BorderLayout());
 
         JPanel logoPanel = new JPanel(new BorderLayout());
-        logoPanel.setBackground(new Color(30, 30, 30));
+        logoPanel.setBackground(new Color(244, 237, 225));
         logoPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 0, 10));
 
         try {
-            ImageIcon logoIcon = new ImageIcon("image\\CusineCrossroad.png");
-            Image img = logoIcon.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH);
+            ImageIcon logoIcon = new ImageIcon("image\\Cuisine Crossroad.jpg");
+            Image img = logoIcon.getImage().getScaledInstance(250, 250, Image.SCALE_SMOOTH);
             JLabel logoLabel = new JLabel(new ImageIcon(img));
             logoLabel.setHorizontalAlignment(SwingConstants.CENTER);
             logoPanel.add(logoLabel, BorderLayout.CENTER);
@@ -77,9 +77,12 @@ public class createDB {
 
         JLabel userLabel = new JLabel("SAP_ID:");
         JTextField userField = new JTextField();
-
+        userLabel.setFont(new Font("Georgia",Font.BOLD,20));
+        
         JLabel passLabel = new JLabel("Password:");
         JPasswordField passField = new JPasswordField();
+        passLabel.setFont(new Font("Georgia",Font.BOLD,20));
+
 
         JButton loginButton = new JButton("Login");
         loginButton.setBackground(new Color(153, 51, 0));
